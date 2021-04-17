@@ -1,7 +1,5 @@
 ## the task is to cache the inverse of a matrix
 ## to do that, the functions should be able to
-## cache its inverse and 
-## create a special matrix object
 ## to get the matrix, the function should be makeCacheMatrix
 ## it is said that this function creates a
 ## special "matrix" object that can cache its inverse
