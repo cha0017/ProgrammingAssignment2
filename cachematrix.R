@@ -2,8 +2,8 @@
 ## to do that, the functions should be able to
 ## cache its inverse and 
 ## create a special matrix object
-##
-## to get the matrix, the function creates a
+## to get the matrix, the function should be makeCacheMatrix
+## it is said that this function creates a
 ## special "matrix" object that can cache its inverse
 
 makeCacheMatrix <- function(x = matrix()) {
@@ -19,13 +19,14 @@ makeCacheMatrix <- function(x = matrix()) {
        setinverse = setinverse,
        getinverse = getinverse)
 }
-##
+
 ## the next function should be cacheSolve
-## this fuction computes the inverse of the special
-## "matrix" returned by makeCacheMatrix above.
-## if the inverse has already been calculated 
-## (and the matrix has not changed), then the cachesolve
-## should retrieve the inverse from the cache.
+## this function calculates the inverse that is 
+## returned by makeCacheMatrix above.
+## to retrieve the inverse of the cache, we need 
+## to observe if the matrix has not been change after
+## the inverse of the special "matrix" 
+## object has been calculated. 
 
 cacheSolve <-function(x, ...) {
   inv <- x$getinverse()
